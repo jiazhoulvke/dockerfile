@@ -5,7 +5,7 @@ MAINTAINER jiazhoulvke@gmail.com
 RUN sed -i "s/archive.ubuntu.com/cn.archive.ubuntu.com/g" /etc/apt/sources.list && \
         apt-get update && \
         apt-get upgrade -y && \
-        apt-get install -y openssh-server vim htop wget unzip curl bash-completion nginx mysql-client libmysqlclient-dev php7.0 php7.0-bcmath php7.0-cli php7.0-curl php7.0-dev php7.0-fpm php7.0-gd php7.0-json php7.0-mcrypt php7.0-mysql php7.0-sqlite3 php7.0-xml php7.0-zip supervisor redis-server && \
+        apt-get install -y openssh-server vim htop wget unzip curl bash-completion nginx mysql-client libmysqlclient-dev php7.0 php7.0-bcmath php7.0-cli php7.0-curl php7.0-dev php7.0-fpm php7.0-gd php7.0-json php7.0-mcrypt php7.0-mbstring php7.0-mysql php7.0-sqlite3 php7.0-xml php7.0-zip supervisor redis-server && \
         DEBIAN_FRONTEND=noninteractive apt-get install -y mysql-server && \
         apt-get clean && \
         sed -i "s/prohibit-password/YES/" /etc/ssh/sshd_config && \
